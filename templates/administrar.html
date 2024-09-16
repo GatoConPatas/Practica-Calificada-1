@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Administrar Registros</title>
 </head>
 <body>
-    <h1 style="font-size: 64px;">Hola Mundo</h1>
+    <h1>Administrar Registros</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>DNI</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for registro in registros %}
+                <tr>
+                    <td>{{ registro.dni }}</td>
+                    <td>{{ registro.nombre }}</td>
+                    <td>{{ registro.apellido }}</td>
+                    <td>{{ registro.direccion }}</td>
+                    <td>{{ registro.telefono }}</td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="5">No hay registros disponibles.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>
