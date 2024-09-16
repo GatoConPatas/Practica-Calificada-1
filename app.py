@@ -6,10 +6,10 @@ import os
 app = Flask(__name__, template_folder='templates')
 
 # Configuración de la base de datos
-DB_HOST = 'dpg-cr6bdj1u0jms73bn1teg-a.oregon-postgres.render.com'
-DB_NAME = 'dbtest_h0hy'
-DB_USER = 'dbtest_h0hy_user'
-DB_PASSWORD = 'xkmD4V6rmoGNJ27uGLq1k76ynORQ8HTd'
+DB_HOST = 'dpg-crk8fnrqf0us73dfab5g-a'
+DB_NAME = 'db_practica_calificada_1'
+DB_USER = 'db_practica_calificada_1_user'
+DB_PASSWORD = 'kM9atfRnVJFcXZmROPuOXljve6ax7ku7'
 
 
 def conectar_db():
@@ -70,5 +70,5 @@ def eliminar_registro(dni):
 
 if __name__ == '__main__':
     #Esto es nuevo
-    port = int(os.environ.get('PORT',5000))    
+    port = int(os.environ.get('PORT',5000))
     app.run(host='0.0.0.0', port=port, debug=True)
